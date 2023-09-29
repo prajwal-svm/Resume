@@ -27,12 +27,12 @@
 \usepackage{ifthen} % Required for ifthenelse statements
 
 \usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-}
+% \hypersetup{
+%     colorlinks=false,
+%     linkcolor=blue,
+%     filecolor=black,      
+%     urlcolor=black,
+% }
 
 \pagestyle{empty} % Suppress page numbers
 
