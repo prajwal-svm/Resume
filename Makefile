@@ -1,11 +1,25 @@
-LIB = pdflatex
+# Compiler settings
+LATEX = pdflatex
+FLAGS = -interaction=nonstopmode -shell-escape
 
-all: create clean
+# File names
+SOURCE = resume.tex
+OUTPUT = PRAJWAL_MURTHY_RESUME.pdf
 
-# The build target executable:
-create: resume.tex
-	$(LIB) -jobname=PRAJWAL_SOMENDYAPANAHALLI_VENKATESHMURTHY_RESUME resume.tex
+all: $(OUTPUT) optimize check-metadata
 
-# To remove generated files
+$(OUTPUT): $(SOURCE)
+	$(LATEX) $(FLAGS) -output-format=pdf -jobname=$(basename $(OUTPUT)) $(SOURCE)
+	$(LATEX) $(FLAGS) -output-format=pdf -jobname=$(basename $(OUTPUT)) $(SOURCE)
+
+optimize: $(OUTPUT)
+	qpdf --linearize $(OUTPUT) $(basename $(OUTPUT))_optimized.pdf
+	mv $(basename $(OUTPUT))_optimized.pdf $(OUTPUT)
+
+check-metadata: $(OUTPUT)
+	@echo "Checking PDF metadata..."
+	@pdfinfo $(OUTPUT)
+	@echo "PDF optimization check complete."
+
 clean:
-	$(RM) *.log *.out *.aux
+	rm -f *.aux *.log *.out *.pdf
