@@ -1,6 +1,6 @@
 # Compiler settings
-LATEX = pdflatex
-FLAGS = -interaction=nonstopmode -shell-escape
+LATEX = latexmk
+FLAGS = -pdf -interaction=nonstopmode -shell-escape -synctex=1
 
 # File names
 SOURCE = resume.tex
@@ -8,9 +8,12 @@ OUTPUT = PRAJWAL_MURTHY_RESUME.pdf
 
 all: $(OUTPUT) optimize check-metadata
 
+# Live compilation mode
+watch:
+	$(LATEX) -pvc $(FLAGS) -jobname=$(basename $(OUTPUT)) $(SOURCE)
+
 $(OUTPUT): $(SOURCE)
-	$(LATEX) $(FLAGS) -output-format=pdf -jobname=$(basename $(OUTPUT)) $(SOURCE)
-	$(LATEX) $(FLAGS) -output-format=pdf -jobname=$(basename $(OUTPUT)) $(SOURCE)
+	$(LATEX) $(FLAGS) -jobname=$(basename $(OUTPUT)) $(SOURCE)
 
 optimize: $(OUTPUT)
 	qpdf --linearize $(OUTPUT) $(basename $(OUTPUT))_optimized.pdf
@@ -22,4 +25,5 @@ check-metadata: $(OUTPUT)
 	@echo "PDF optimization check complete."
 
 clean:
-	rm -f *.aux *.log *.out *.pdf
+	$(LATEX) -C
+	rm -f *.aux *.log *.out *.pdf *.fls *.fdb_latexmk *.synctex.gz

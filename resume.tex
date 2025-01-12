@@ -1,14 +1,13 @@
 \documentclass[10pt,letterpaper]{article}
 
-% Add font packages
 \usepackage[T1]{fontenc}
-\usepackage{helvet}
+\usepackage{tgheros}
 \renewcommand{\familydefault}{\sfdefault}
 
 \usepackage[empty]{fullpage}
 \usepackage{enumitem}
-\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
-\usepackage[top=0.4in,bottom=0.4in,left=0.4in,right=0.4in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % Changed linkcolor to blue 
+\usepackage[top=0.5in,bottom=0.4in,left=0.4in,right=0.4in]{geometry}
 \usepackage{titlesec}
 \usepackage{xhfill}
 \usepackage{ragged2e}
@@ -25,7 +24,7 @@
     pdfcreator={pdfLaTeX},
     pdfstartview=FitH,
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=blue, % Changed this to blue
     urlcolor=blue,
     pdfpagemode=UseOutlines,
     bookmarksnumbered=false,
@@ -45,8 +44,8 @@
 % Header
 {\centering\huge\textbf{Prajwal Murthy}\par}
 \vspace{2mm}
-{\centering\small{\href{mailto:prajwal.murthy@gmail.com}{prajwal.svmurthy@gmail.com} $|$ \href{https://prajwal.me}{https://prajwal.me} $|$ \href{https://linkedin.com/in/prajwal-svm}{https://linkedin.com/in/prajwal-svm} $|$ \href{https://github.com/prajwal-svm}{https://github.com/prajwal-svm}}\par}
-\vspace{2mm}
+{\centering\small{Los Angeles, CA $|$ +1 (773) 789-1423 $|$  \href{mailto:prajwal.svmurthy@gmail.com}{prajwal.svmurthy@gmail.com} $|$ \href{https://linkedin.com/in/prajwal-svm}{linkedin.com/in/prajwal-svm} $|$  \href{https://github.com/prajwal-svm}{github.com/prajwal-svm}  $|$   \href{https://prajwal.me}{prajwal.me}}\par}
+\vspace{1mm}
 
 % Work Experience Section
 {\hspace{0in}\small\textbf{WORK EXPERIENCE}}\par
@@ -54,69 +53,75 @@
 \noindent\rule{\textwidth}{0.1pt}
 \vspace{-4mm}
 
-\hspace{0in}\textbf{Fullstack Engineer (Co-op)} \hfill \textbf{Jun 2024 -- Dec 2024}\\
-\hspace{0in}\textit{Supplyframe} \hfill \textit{Pasadena, California}
-\begin{itemize}[leftmargin=0.15in,nosep,topsep=3pt]
-    \item Led security enhancement initiatives using Burp Suite tools and custom scripts to identify and resolve critical XSS vulnerabilities across high-traffic applications, reducing security breaches by over 40\%
-    \item Architected and executed migration of Socket.io infrastructure with 8 Express-compatible plugins, implementing connection pooling and event buffering to achieve 25\% performance improvement
-    \item Designed and developed components for internal design systems using React, TypeScript, and Storybook, creating 30+ reusable components that decreased design inconsistency by 30\%
-    \item Implemented real-time collaborative messaging features using WebSocket and Redis pub/sub, optimizing connection handling and state synchronization to support 1000+ concurrent users with <100ms latency
+\hspace{0in}\textbf{Fullstack Engineer} \hfill \textbf{Jun 2024 -- Dec 2024}\\
+\hspace{0in}\textit{\href{https://supplyframe.com}{\textcolor{black}{Supplyframe}}} \hfill \textit{Pasadena, California} % Wrapped the company name in \textcolor{black}
+\begin{itemize}[leftmargin=0.15in,nosep,topsep=3pt,itemsep=1mm]
+   \item Spearheaded platform security enhancements, mitigating XSS and IDOR vulnerabilities using Burp Suite for automated detection and patching, resulting in a 40\% reduction in security incidents.
+   \item Engineered real-time messaging infrastructure by architecting Socket.io and Redis pub/sub systems, which now supports 1000+ concurrent users with sub-100ms latency, increasing user engagement by 45\% and reducing server costs by 50\%.
+   \item Created a scalable UI component library with 30+ reusable components, achieving 95\% test coverage and reducing design inconsistencies by 30\%.
+   \item Improved REST API performance by refactoring SQL queries, utilizing parameterized queries, implementing proper indexing and optimizing join conditions, resulting in a 6x improvement in API response time.
 \end{itemize}
 
 \vspace{1mm}
 \hspace{0in}\textbf{Frontend Engineer (Mid Level)} \hfill \textbf{Mar 2022 -- Nov 2022}\\
-\hspace{0in}\textit{Certa.ai} \hfill \textit{Remote}
-\begin{itemize}[leftmargin=0.15in,nosep,topsep=3pt]
-    \item Architected and developed enterprise-scale third-party risk management platform serving 50,000+ users, utilizing React, TypeScript, and Redux Toolkit with custom middleware
-    \item Built high-performance UI component library of 40+ components using React, Styled Components, and Jest, achieving 95\% test coverage
-    \item Engineered dynamic dashboards using React Flow and D3.js, implementing virtual scrolling and lazy loading to handle 10,000+ nodes while maintaining 60fps
+\hspace{0in}\textit{\href{https://certa.ai}{\textcolor{black}{Certa.ai}}} \hfill \textit{Remote} % Wrapped the company name in \textcolor{black}
+\begin{itemize}[leftmargin=0.15in,nosep,topsep=3pt,itemsep=1mm]
+   \item Enhanced key features of an enterprise third-party risk platform for clients like Walmart and Tesla etc., and engineered a workflow system handling 10,000+ nodes at 60fps, decreasing onboarding time by 70\%.
+     \item Boosted workflow creation efficiency by 95\% through innovation in JSON configuration optimization utilizing JavaScript Proxy patterns, and developed an efficient automated unused attribute detection system reducing config processing time by 50\%.
+   \item Developed and maintained a library of 40+ reusable React/TypeScript UI components achieving 95\% test coverage, accelerating product development and shortening development time by 70\% across 3 product teams.
 \end{itemize}
 
 \vspace{1mm}
 \hspace{0in}\textbf{Software Engineer} \hfill \textbf{Aug 2019 -- Mar 2022}\\
-\hspace{0in}\textit{Snapwiz Inc} \hfill \textit{Remote}
-\begin{itemize}[leftmargin=0.15in,nosep,topsep=3pt]
-    \item Optimized Edulastic platform serving 30M+ users by implementing React.Suspense, code splitting, and lazy loading, resulting in 40\% smaller bundle size
-    \item Designed MongoDB schema optimization and indexing strategies, reducing average query time from 500ms to 100ms
-    \item Developed reusable React hooks and context providers, reducing codebase complexity by 35\% and improving development velocity by 40\%
+\hspace{0in}\textit{\href{https://edulastic.com}{\textcolor{black}{Snapwiz Inc}}} \hfill \textit{Remote} % Wrapped the company name in \textcolor{black}
+\begin{itemize}[leftmargin=0.15in,nosep,topsep=3pt,itemsep=1mm]
+   \item Improved student engagement by 35\%, enhancing platform performance for 30M+ students across 10,000 institutions, by implementing React.Suspense and code splitting which reduced bundle size by 40\%.
+ \item Enabled real-time student assessments by spearheading database optimization initiatives that impacted 1M+ daily active users, and architecting a MongoDB schema redesign, resulting in an 80\% reduction in query response time.
+ \item Led product growth by guiding end-to-end development of core platform features driving 200\% YoY revenue growth, directing 3 engineers, managing AWS infrastructure achieving 99.9\% uptime and earning Employee of the Year award.
+ \item Boosted subscription growth and user experience by launching a service for 5M+ premium users, designing a payment infrastructure using Node.js/Redis that resulted in a 35\% increase in subscription renewals.
 \end{itemize}
 
-\vspace{2mm}
-{\hspace{0in}\small\textbf{EDUCATION}}\par
+% Projects Section
+\vspace{mm}
+{\hspace{0in}\small\textbf{PROJECTS}}\par
 \vspace{-2mm}
 \noindent\rule{\textwidth}{0.1pt}
 \vspace{-4mm}
 
-\hspace{0in}\textbf{Master of Computer Science} \hfill Jan 2023 -- Dec 2024 \\
-\hspace{0.25in}\textit{Illinois Institute of Technology} \hfill \textit{Chicago, IL}
-
-\vspace{2mm}
-{\hspace{0in}\small\textbf{PERSONAL PROJECTS}}\par
-\vspace{-2mm}
-\noindent\rule{\textwidth}{0.1pt}
-\vspace{-4mm}
-
-\hspace{0in}\textbf{Intelligent Content Assistant} \textit{| OpenAI GPT-4-turbo, LangChain, React, Node.js, Redis, AWS}
-\begin{itemize}[leftmargin=0.15in,nosep,topsep=1pt]
-    \item Engineered a production-grade AI content platform using LangChain for orchestrating multiple LLMs, implementing intelligent caching and prompt optimization that reduced API costs by 40\%
+\hspace{0in}\textbf{ThoughtFabric.ai}  \textit{Visual AI Workflow macOS Application $|$ \href{https://thoughtfabric.ai}{Link} $|$ Tauri 2.0, Rust, Next.js, TypeScript, SurrealDB}
+\begin{itemize}[leftmargin=0.15in,nosep,topsep=1pt,itemsep=0.5mm]
+     \item Engineered a 100\% secure, high-performance visual AI workflow macOS application using Rust, Tauri 2.0 and Next.js for the UI, that empowers users to create and connect AI nodes in a visual canvas, and achieving over 1000+ downloads within its first week that resulted in a 15\% reduction in their time to arrive at actionable insights.   
+     \item Implemented a sub 100 ms data pathway by optimizing SurrealDB, also incorporating prompt caching and API throttling leading to a reduction in OpenAI costs by 40\%, boosting overall user productivity by 20\% measured via internal surveys, and resulting in over 200+ active monthly users.
 \end{itemize}
 
-\hspace{0in}\textbf{Social Media App for Startup Founders} \textit{| React, Node.js, GraphQL, PostgreSQL, Firebase, Google Cloud}
-\begin{itemize}[leftmargin=0.15in,nosep,topsep=1pt]
-    \item Engineered a production ready social media platform utilizing React and GraphQL with Node.js, implementing a scalable serverless architecture
+\hspace{0in}\textbf{Smart Homes Platform} \textit{$|$ \href{https://github.com/prajwal-svm/SmartHomes}{Link} $|$ React, TypeScript, Java Servlets, MySQL, MongoDB, ElasticSearch, Vector Embeddings}
+\begin{itemize}[leftmargin=0.15in,nosep,topsep=1pt,itemsep=0.5mm]
+  \item Built a scalable, full-stack e-commerce platform, employing Java microservices with a REST API, ElasticSearch with OpenAI embeddings for real-time semantic search, MySQL for OLTP, and MongoDB for unstructured data. This architecture is optimized to handle 10k+ concurrent users with efficient caching system to keep response times under 0.1s for key endpoints.
 \end{itemize}
 
+% Skills Section
 \vspace{2mm}
 {\hspace{0in}\small\textbf{SKILLS}}\par
 \vspace{-2mm}
 \noindent\rule{\textwidth}{0.1pt}
 \vspace{-4mm}
 
-\hspace{0in}\textbf{Programming Languages:} TypeScript, JavaScript (ES6+), Python, Java, C++, C\\
-\hspace{0.25in}\textbf{Front End Engineering:} React, Next.js, HTML, CSS (SASS/SCSS), React Native, Tailwind CSS\\
-\hspace{0.25in}\textbf{Backend Engineering:} PostgreSQL, Nginx, Redis, Firebase, MongoDB, Flask, Express.js, REST APIs, GraphQL, Websockets\\
-\hspace{0.25in}\textbf{Deployment \& CI/CD:} Git, Docker, Kubernetes, Jenkins, Amazon Web Services, Google Cloud, Azure Cloud\\
+\hspace{0in}\textbf{Programming Languages:} TypeScript, JavaScript (ES6+), Python, Rust, Java, C++\\
+\hspace{0.25in}\textbf{Frontend Engineering:} React, Next.js, HTML, CSS (SASS/SCSS), Tailwind CSS\\
+\hspace{0.25in}\textbf{Backend Engineering:} PostgreSQL, Redis, MongoDB, Express.js, REST APIs, GraphQL, WebSockets \\
+\hspace{0.25in}\textbf{Deployment \& CI/CD:} Git, Docker, Kubernetes, Jenkins,  Amazon Web Services, Google Cloud, Azure Cloud\\
 \hspace{0.25in}\textbf{Build \& Testing:} Node.js, Webpack, Babel, Jest, Cypress, React Testing Library\\
-\hspace{0.25in}\textbf{AI Engineering:} OpenAI Embeddings, LangChain, Prompt Engineering, Vector Databases (EdgeDB), RAG, Pytorch
+\hspace{0.25in}\textbf{AI/ML Engineering:} OpenAI Embeddings, LangChain, Prompt Engineering, Vector Databases (EdgeDB), RAG, Pytorch
+
+% Education Section
+\vspace{2mm}
+{\hspace{0in}\small\textbf{EDUCATION}}\par
+\vspace{-2mm}
+\noindent\rule{\textwidth}{0.1pt}
+\vspace{-4mm}
+
+\hspace{0in}\textbf{Master of Computer Science} $|$ \textit{Illinois Institute of Technology} $|$ \textit{Chicago, IL} \hfill Jan 2023 -- Dec 2024  
+\begin{itemize}[leftmargin=0.15in,nosep,topsep=3pt]
+\end{itemize}
 
 \end{document}

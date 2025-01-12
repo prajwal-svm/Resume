@@ -3,3 +3,6 @@
 *.aux
 *.ico
 *.ini
+*.fdb_latexmk
+*.fls
+*.synctex.gz
